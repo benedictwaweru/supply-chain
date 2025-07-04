@@ -6,8 +6,19 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve:ssr:admin": "node dist/admin/server/server.mjs",
+    "serve:ssr:angular": "node dist/angular/server/server.mjs",
+    "dev:admin": "ng serve admin",
+    "dev:angular": "ng serve angular",
+    "build:admin": "ng build admin",
+    "build:angular": "ng build angular",
+    "build:all": "pnpm run build:admin && pnpm run build:angular",
+    "lint:admin": "ng lint admin",
+    "lint:angular": "ng lint angular",
+    "lint:all": "pnpm run lint:admin && pnpm run lint:angular"
   },
+  "packageManager": "pnpm@10.12.1",
   "prettier": {
     "overrides": [
       {
@@ -25,14 +36,25 @@
     "@angular/core": "^20.0.0",
     "@angular/forms": "^20.0.0",
     "@angular/platform-browser": "^20.0.0",
+    "@angular/platform-server": "^20.0.0",
     "@angular/router": "^20.0.0",
+    "@angular/ssr": "^20.0.5",
+    "@primeuix/themes": "^1.2.0",
+    "@tailwindcss/postcss": "^4.1.11",
+    "express": "^5.1.0",
+    "postcss": "^8.5.6",
+    "primeng": "20.0.0-rc.1",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^4.1.11",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@angular/build": "^20.0.5",
     "@angular/cli": "^20.0.5",
     "@angular/compiler-cli": "^20.0.0",
+    "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^20.17.19",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
