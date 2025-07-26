@@ -1,0 +1,24 @@
+{
+	"name": "supply-chain",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev:web": "pnpm --filter web dev",
+		"build:web": "pnpm --filter web build",
+		"lint:web": "pnpm --filter web lint",
+		"preview:web": "pnpm --filter web preview",
+		"dev:admin": "pnpm --filter admin dev",
+		"build:admin": "pnpm --filter admin build",
+		"lint:admin": "pnpm --filter admin lint",
+		"preview:admin": "pnpm --filter admin preview",
+		"dev:server:win": "cd ./apps/server && gradlew.bat bootRun",
+		"build:server:win": "cd ./apps/server && gradlew.bat build",
+		"dev:server:linux": "cd ./apps/server && ./gradlew bootRun",
+		"build:server:linux": "cd ./apps/server && ./gradlew build"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.12.1"
+}
